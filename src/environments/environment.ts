@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyCHEU81sQi7wkL7p-bfSaoQmWAVIhzqzAg",
+    authDomain: "blood-bank-management-sy-97672.firebaseapp.com",
+    databaseURL: "https://blood-bank-management-sy-97672.firebaseio.com",
+    projectId: "blood-bank-management-sy-97672",
+    storageBucket: "blood-bank-management-sy-97672.appspot.com",
+    messagingSenderId: "959336345287"
+  }
 };
 
 /*

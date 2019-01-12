@@ -1,20 +1,65 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!--Section: Contact v.1-->
+<section class="section pb-5 container" >
+  <br><br>
+  <!--Section heading-->
+  <h2 class="section-heading h1 pt-4">Contact us</h2>
+  <!--Section description-->
+  <h4 class="section-heading h5 pt-4">Please feel free to reach out to me</h4>
 
+  <div class="row">
+
+      <!--Grid column-->
+      <div class="col-lg-5 mb-4">
+
+          <!--Form with header-->
+          <div class="card">
+
+              <div class="card-body">
+                  <!--Header-->
+                  <div class="form-header blue accent-1">
+                      <h3><i class="fa fa-envelope"></i> Write to us:</h3>
+                  </div>
+
+                  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+                      <!--Body-->
+                      <div class="md-form">
+                          <i class="fa fa-user prefix grey-text"></i>
+                          <input mdbActive type="text" id="form3" ngModel name="name" required class="form-control">
+                          <label for="form3">Your name</label>
+                      </div>
+
+                      <div class="md-form">
+                          <i class="fa fa-envelope prefix grey-text"></i>
+                          <input mdbActive type="text" id="form2" required class="form-control" ngModel #email="ngModel" name="email" email>
+                          <label for="form2">Your email</label>
+                      </div>
+
+                      <div class="md-form">
+                          <i class="fa fa-tag prefix grey-text"></i>
+                          <input mdbActive type="text" id="form32" required class="form-control" ngModel name="subject">
+                          <label for="form34">Subject</label>
+                      </div>
+
+                      <div class="md-form">
+                          <i class="fa fa-pencil prefix grey-text"></i>
+                          <textarea mdbActive type="text" id="form8" required class="md-textarea form-control" ngModel name="content"></textarea>
+                          <label for="form8">Icon Prefix</label>
+                      </div>
+
+                      <div class="text-center">
+                          <button type="submit" 
+                                  (click)="showSuccess()" 
+                                  [disabled]="!f.valid"
+                                  class="btn btn-elegant waves-light" 
+                                  mdbRippleRadius>Submit</button>
+                      </div>
+                    </form>
+              </div>
+
+          </div>
+          <!--Form with header-->
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
